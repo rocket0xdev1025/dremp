@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <title>Denald Tremp ($TREMP) — The Mall Remembers</title>
+  <meta name="description" content="Denald Tremp ($TREMP) on Solana. A bronze on the National Mall, raised to mock a Vietnam draft deferment, now has a ticker.">
+  <meta property="og:title" content="Denald Tremp ($TREMP)">
+  <meta property="og:description" content="Statue mocking Trump's Vietnam draft deferment, erected on the National Mall. The coin is $TREMP.">
+  <meta property="og:image" content="banner.jpg">
+  <link rel="icon" href="logo.png">
+  <link rel="preload" as="image" href="mall-bg.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bronze: "#A97445",
+            gold: "#E7C98A",
+            goldBright: "#F6E7C1",
+            sky: "#7EB6E9",
+            lacquer: "#9B2330",
+            ivory: "#F4EBDD",
+            ink: "#100C08",
+          },
+          fontFamily: {
+            display: ["Cinzel", "serif"],
+            body: ["Be Vietnam Pro", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { background: #100C08; scroll-padding-top: 6.5rem; }
+    ::selection { background: rgba(231, 201, 138, 0.35); color: #1A1208; }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #100C08; }
+    ::-webkit-scrollbar-thumb { background: #8C6239; border-radius: 99px; }
+
+    .shimmer { color: #F6E7C1; }
+    @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+      .shimmer {
+        background-image: linear-gradient(100deg, #A97445 0%, #F6E7C1 28%, #E7C98A 46%, #FFF6DE 52%, #E7C98A 58%, #C4923A 100%);
+        background-size: 220% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: sheen 8s linear infinite;
+      }
+    }
+    @keyframes sheen { to { background-position: 220% center; } }
+
+    .marquee { animation: ticker 42s linear infinite; }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .marquee-wrap:hover .marquee { animation-play-state: paused; }
+
+    .spin-slow { animation: spin 32s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .panel {
+      background:
+        linear-gradient(180deg, rgba(36, 24, 14, 0.78), rgba(12, 8, 5, 0.82));
+      border: 1px solid rgba(231, 201, 138, 0.32);
+      box-shadow:
+        inset 0 0 0 1px rgba(231, 201, 138, 0.08),
+        0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .shimmer { animation: none; color: #F6E7C1; background: none; }
+      .marquee, .spin-slow { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body class="font-body text-ivory antialiased">
+  <div class="fixed inset-0 -z-10" aria-hidden="true">
+    <img src="mall-bg.jpg" alt="" class="h-full w-full object-cover">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(16,12,8,0.28)_0%,rgba(10,7,4,0.72)_62%,rgba(6,4,2,0.9)_100%)]"></div>
+    <div class="absolute inset-0 opacity-[0.14]" style="background-image: linear-gradient(30deg, rgba(231,201,138,0.45) 1px, transparent 1px), linear-gradient(150deg, rgba(231,201,138,0.45) 1px, transparent 1px); background-size: 22px 38px;"></div>
+  </div>
+
+  <p class="pointer-events-none fixed left-5 top-1/2 z-40 hidden -translate-y-1/2 font-display text-[10px] tracking-[0.55em] text-gold/50 [writing-mode:vertical-rl] 2xl:block">ĐÀI KỶ NIỆM</p>
+  <p class="pointer-events-none fixed right-5 top-1/2 z-40 hidden -translate-y-1/2 font-display text-[10px] tracking-[0.55em] text-gold/50 [writing-mode:vertical-rl] 2xl:block">$TREMP · SOLANA</p>
+
+  <header class="fixed inset-x-0 top-0 z-50">
+    <div class="border-b border-gold/25 bg-ink/75 backdrop-blur-md">
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-3">
+        <a href="#top" class="flex items-center gap-3">
+          <img src="logo.png" alt="" class="h-11 w-11 rounded-full object-cover ring-2 ring-gold shadow-[0_0_18px_rgba(126,182,233,0.45)]">
+          <span class="font-display text-sm tracking-[0.16em] text-goldBright sm:text-base">DENALD TREMP</span>
+        </a>
+        <nav class="hidden items-center gap-8 text-[12px] uppercase tracking-[0.28em] text-ivory/80 md:flex" aria-label="Primary">
+          <a href="#story" class="transition hover:text-gold">Story</a>
+          <a href="#how" class="transition hover:text-gold">How to Buy</a>
+          <a href="#chart" class="transition hover:text-gold">Chart</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a href="https://t.me/Denald_Tremp" target="_blank" rel="noopener noreferrer" class="grid h-10 w-10 place-items-center overflow-hidden rounded-full ring-1 ring-gold/40 transition hover:ring-sky" aria-label="Telegram">
+            <img src="tg.png" alt="" class="h-10 w-10 object-cover">
+          </a>
+          <a href="https://x.com/Denald_Tremp_x" target="_blank" rel="noopener noreferrer" class="grid h-10 w-10 place-items-center overflow-hidden rounded-full bg-black ring-1 ring-gold/40 transition hover:ring-sky" aria-label="X">
+            <img src="x.png" alt="" class="h-10 w-10 object-cover">
+          </a>
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="hidden rounded-full bg-gradient-to-b from-goldBright to-[#C4923A] px-4 py-2 font-display text-[11px] tracking-[0.18em] text-[#2A1608] shadow-[0_8px_24px_rgba(196,146,58,0.35)] transition hover:brightness-110 sm:inline-flex">BUY NOW</a>
+        </div>
+      </div>
+      <nav class="flex justify-center gap-6 border-t border-gold/10 py-2 text-[10px] uppercase tracking-[0.28em] text-ivory/70 md:hidden" aria-label="Mobile">
+        <a href="#story" class="hover:text-gold">Story</a>
+        <a href="#how" class="hover:text-gold">How to Buy</a>
+        <a href="#chart" class="hover:text-gold">Chart</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="flex min-h-[100svh] flex-col items-center justify-center px-5 pb-16 pt-36 text-center md:pt-28">
+      <div class="relative mb-8 h-44 w-44 sm:h-52 sm:w-52">
+        <div class="absolute inset-0 rounded-full bg-sky/30 blur-2xl"></div>
+        <div class="spin-slow absolute inset-0 rounded-full border border-dashed border-gold/70"></div>
+        <div class="absolute inset-2 rounded-full border border-sky/50"></div>
+        <img src="logo.png" alt="Denald Tremp bronze bust" class="absolute inset-3 h-[calc(100%-1.5rem)] w-[calc(100%-1.5rem)] rounded-full object-cover ring-2 ring-gold">
+      </div>
+
+      <p class="mb-4 font-display text-[11px] tracking-[0.48em] text-sky sm:text-xs">SOLANA · NATIONAL MALL</p>
+      <h1 class="font-display text-[clamp(3.25rem,12vw,7.5rem)] font-bold leading-[0.84] tracking-[0.04em]">
+        <span class="shimmer block">DENALD</span>
+        <span class="shimmer block">TREMP</span>
+      </h1>
+      <p class="mt-5 font-display text-xl tracking-[0.45em] text-sky sm:text-2xl">$TREMP</p>
+      <p class="mx-auto mt-6 max-w-xl text-base font-light leading-relaxed text-ivory/85 sm:text-lg">
+        A bronze went up on the National Mall to mock a Vietnam draft deferment. The grin stayed. The ticker is $TREMP.
+      </p>
+
+      <div class="mt-9 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-b from-goldBright to-[#C4923A] px-8 py-3.5 font-display text-sm tracking-[0.22em] text-[#2A1608] shadow-[0_12px_40px_rgba(196,146,58,0.38)] transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold">
+          BUY NOW <span aria-hidden="true">→</span>
+        </a>
+        <a href="https://dexscreener.com/sol/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-sky/70 bg-sky/10 px-8 py-3.5 font-display text-sm tracking-[0.22em] text-sky transition hover:bg-sky/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky">
+          CHART <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="marquee-wrap overflow-hidden border-y border-gold/30 bg-black/55">
+      <div class="marquee flex w-max">
+        <p class="flex gap-10 px-5 py-3.5 font-display text-[11px] tracking-[0.42em] text-gold">
+          <span>STATUE ON THE NATIONAL MALL</span>
+          <span class="text-sky">◆</span>
+          <span>VIETNAM DRAFT DEFERMENT</span>
+          <span class="text-sky">◆</span>
+          <span>DENALD TREMP</span>
+          <span class="text-sky">◆</span>
+          <span>$TREMP</span>
+          <span class="text-sky">◆</span>
+          <span>SOLANA</span>
+          <span class="text-sky">◆</span>
+          <span>BRONZE DOES NOT BLINK</span>
+          <span class="text-sky">◆</span>
+          <span>ĐÀI KỶ NIỆM</span>
+          <span class="text-sky">◆</span>
+        </p>
+        <p aria-hidden="true" class="flex gap-10 px-5 py-3.5 font-display text-[11px] tracking-[0.42em] text-gold">
+          <span>STATUE ON THE NATIONAL MALL</span>
+          <span class="text-sky">◆</span>
+          <span>VIETNAM DRAFT DEFERMENT</span>
+          <span class="text-sky">◆</span>
+          <span>DENALD TREMP</span>
+          <span class="text-sky">◆</span>
+          <span>$TREMP</span>
+          <span class="text-sky">◆</span>
+          <span>SOLANA</span>
+          <span class="text-sky">◆</span>
+          <span>BRONZE DOES NOT BLINK</span>
+          <span class="text-sky">◆</span>
+          <span>ĐÀI KỶ NIỆM</span>
+          <span class="text-sky">◆</span>
+        </p>
+      </div>
+    </div>
+
+    <section class="mx-auto max-w-6xl px-5 py-14" aria-label="Contract address">
+      <button type="button" id="copy-ca" class="panel group flex w-full flex-col items-stretch gap-4 rounded-sm px-5 py-5 text-left transition hover:border-gold sm:flex-row sm:items-center sm:justify-between sm:px-7" aria-describedby="copy-status">
+        <span>
+          <span class="block font-display text-[10px] tracking-[0.42em] text-gold">HỢP ĐỒNG</span>
+          <span class="mt-1 block text-xs uppercase tracking-[0.28em] text-ivory/60">Available CA</span>
+        </span>
+        <code class="font-mono text-2xl tracking-[0.28em] text-goldBright sm:text-3xl">TBA</code>
+        <span class="inline-flex items-center justify-center rounded-full border border-sky/60 bg-sky/10 px-5 py-2 font-display text-[11px] tracking-[0.22em] text-sky transition group-hover:bg-sky group-hover:text-ink">
+          <span id="copy-label">COPY</span>
+        </span>
+      </button>
+      <p id="copy-status" class="sr-only" aria-live="polite"></p>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-5 pb-8" aria-labelledby="exhibit-title">
+      <div class="mb-6 flex items-end justify-between gap-4">
+        <div>
+          <p class="font-display text-[11px] tracking-[0.42em] text-gold">01 · ĐÀI KỶ NIỆM</p>
+          <h2 id="exhibit-title" class="mt-2 font-display text-3xl tracking-wide text-goldBright sm:text-4xl">The exhibit</h2>
+        </div>
+        <p class="hidden text-right font-body text-sm italic text-ivory/70 sm:block">Một bức tượng trên National Mall.</p>
+      </div>
+
+      <figure class="panel relative rounded-sm p-2 sm:p-3">
+        <span class="pointer-events-none absolute left-2 top-2 h-5 w-5 border-l-2 border-t-2 border-gold"></span>
+        <span class="pointer-events-none absolute right-2 top-2 h-5 w-5 border-r-2 border-t-2 border-gold"></span>
+        <span class="pointer-events-none absolute bottom-2 left-2 h-5 w-5 border-b-2 border-l-2 border-gold"></span>
+        <span class="pointer-events-none absolute bottom-2 right-2 h-5 w-5 border-b-2 border-r-2 border-gold"></span>
+        <img src="banner.jpg" alt="Bronze bust of Denald Tremp beside a Vietnam-styled National Mall at sunset, pagodas and golden dragons lining the reflecting pool toward the Washington Monument" class="max-h-[78vh] w-full object-cover">
+      </figure>
+
+      <div class="panel relative mt-4 rounded-sm px-6 py-7 sm:px-10">
+        <div class="absolute bottom-6 right-6 hidden h-[4.5rem] w-[4.5rem] rotate-[-8deg] place-items-center border-2 border-lacquer bg-lacquer/25 sm:grid">
+          <span class="font-display text-[10px] tracking-[0.28em] text-[#F3C3C6]">TREMP</span>
+        </div>
+        <p class="font-display text-[11px] tracking-[0.4em] text-sky">THE HEADLINE</p>
+        <p class="mt-3 max-w-3xl font-display text-2xl leading-snug text-goldBright sm:text-3xl">
+          Statue Mocking Trump's Vietnam Draft Deferment Erected On National Mall
+        </p>
+        <p class="mt-4 max-w-2xl text-sm italic leading-relaxed text-ivory/70">
+          Bức tượng trên National Mall, chế giễu việc hoãn nhập ngũ thời Chiến tranh Việt Nam.
+        </p>
+      </div>
+    </section>
+
+    <section id="story" class="mx-auto max-w-6xl px-5 py-20">
+      <p class="font-display text-[11px] tracking-[0.42em] text-gold">02 · CÂU CHUYỆN</p>
+      <h2 class="mt-2 max-w-3xl font-display text-4xl leading-tight tracking-wide text-goldBright sm:text-5xl">The bronze they set on the lawn</h2>
+
+      <div class="mt-10 grid items-start gap-6 lg:grid-cols-12">
+        <blockquote class="panel relative rounded-sm border-l-4 border-l-lacquer px-6 py-8 lg:col-span-5">
+          <p class="font-display text-xl leading-relaxed text-goldBright">
+            Washington puts memory in bronze. This one was planted in public, aimed at a war he never had to fight.
+          </p>
+          <footer class="mt-6 text-xs uppercase tracking-[0.32em] text-sky">National Mall</footer>
+        </blockquote>
+        <div class="space-y-5 text-[15px] font-light leading-relaxed text-ivory/85 lg:col-span-7 lg:pl-4 lg:pt-2">
+          <p>
+            The statue went up on the National Mall to mock Trump's Vietnam draft deferment. Bone spurs. A war other people fought. A grin cast in metal and left on the country's front lawn, where monuments are supposed to behave.
+          </p>
+          <p>
+            Denald Tremp is that face, given a name you can say out loud. The symbol is <span class="text-sky">$TREMP</span>. Solana holds the coin. The Mall held the joke. Neither one blinks.
+          </p>
+          <p>
+            Pagodas in the dusk, a reflecting pool, an obelisk at the end of the water. The landscape remembers a war. The statue remembers who stayed home. $TREMP is the plaque under both.
+          </p>
+        </div>
+      </div>
+
+      <dl class="mt-10 grid gap-4 sm:grid-cols-3">
+        <div class="panel rounded-sm px-5 py-5">
+          <dt class="font-display text-[10px] tracking-[0.38em] text-gold">CHAIN</dt>
+          <dd class="mt-2 font-display text-2xl text-goldBright">Solana</dd>
+        </div>
+        <div class="panel rounded-sm px-5 py-5">
+          <dt class="font-display text-[10px] tracking-[0.38em] text-gold">SYMBOL</dt>
+          <dd class="mt-2 font-display text-2xl text-sky">$TREMP</dd>
+        </div>
+        <div class="panel rounded-sm px-5 py-5">
+          <dt class="font-display text-[10px] tracking-[0.38em] text-gold">PEDESTAL</dt>
+          <dd class="mt-2 font-display text-2xl text-goldBright">National Mall</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="how" class="mx-auto max-w-6xl px-5 py-16">
+      <div class="mx-auto mb-4 h-8 w-56 text-gold" aria-hidden="true">
+        <svg viewBox="0 0 400 48" class="h-full w-full" fill="none">
+          <path d="M8 36 L200 8 L392 36" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M48 40 L200 18 L352 40" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+          <circle cx="200" cy="8" r="3" fill="currentColor"/>
+        </svg>
+      </div>
+      <p class="text-center font-display text-[11px] tracking-[0.42em] text-gold">03 · CÁCH MUA</p>
+      <h2 class="mt-2 text-center font-display text-4xl tracking-wide text-goldBright sm:text-5xl">How to Buy</h2>
+      <p class="mx-auto mt-4 max-w-xl text-center text-sm font-light leading-relaxed text-ivory/75">
+        Four steps on Solana. SOL goes in. $TREMP comes out. The swap is already aimed at the mint.
+      </p>
+
+      <div class="relative mt-12">
+        <div class="pointer-events-none absolute left-[12%] right-[12%] top-8 hidden h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent lg:block"></div>
+        <ol class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="flex flex-col items-center px-2 text-center">
+            <div class="relative z-10 grid h-16 w-16 place-items-center rounded-full border border-gold bg-[#1A120C] shadow-[0_0_0_6px_rgba(16,12,8,0.85)]">
+              <span class="absolute inset-1.5 rounded-full border border-lacquer/80"></span>
+              <span class="font-display text-lg text-goldBright">01</span>
+            </div>
+            <h3 class="mt-5 font-display text-lg tracking-wide text-goldBright">Create a wallet</h3>
+            <p class="mt-2 text-sm font-light leading-relaxed text-ivory/75">Install Phantom or Solflare. Make a Solana wallet and keep the recovery phrase somewhere only you can see.</p>
+          </li>
+          <li class="flex flex-col items-center px-2 text-center">
+            <div class="relative z-10 grid h-16 w-16 place-items-center rounded-full border border-gold bg-[#1A120C] shadow-[0_0_0_6px_rgba(16,12,8,0.85)]">
+              <span class="absolute inset-1.5 rounded-full border border-lacquer/80"></span>
+              <span class="font-display text-lg text-goldBright">02</span>
+            </div>
+            <h3 class="mt-5 font-display text-lg tracking-wide text-goldBright">Fund it with SOL</h3>
+            <p class="mt-2 text-sm font-light leading-relaxed text-ivory/75">Buy SOL on an exchange and send it to your wallet. Leave a little extra SOL so the network fee can clear.</p>
+          </li>
+          <li class="flex flex-col items-center px-2 text-center">
+            <div class="relative z-10 grid h-16 w-16 place-items-center rounded-full border border-gold bg-[#1A120C] shadow-[0_0_0_6px_rgba(16,12,8,0.85)]">
+              <span class="absolute inset-1.5 rounded-full border border-lacquer/80"></span>
+              <span class="font-display text-lg text-goldBright">03</span>
+            </div>
+            <h3 class="mt-5 font-display text-lg tracking-wide text-goldBright">Open the swap</h3>
+            <p class="mt-2 text-sm font-light leading-relaxed text-ivory/75">Press Buy Now. Pump.fun opens with SOL as the input and $TREMP as the output.</p>
+          </li>
+          <li class="flex flex-col items-center px-2 text-center">
+            <div class="relative z-10 grid h-16 w-16 place-items-center rounded-full border border-gold bg-[#1A120C] shadow-[0_0_0_6px_rgba(16,12,8,0.85)]">
+              <span class="absolute inset-1.5 rounded-full border border-lacquer/80"></span>
+              <span class="font-display text-lg text-goldBright">04</span>
+            </div>
+            <h3 class="mt-5 font-display text-lg tracking-wide text-goldBright">Confirm and hold</h3>
+            <p class="mt-2 text-sm font-light leading-relaxed text-ivory/75">Enter the SOL amount, match the token to the CA on this page, and approve the transaction. $TREMP arrives in the same wallet.</p>
+          </li>
+        </ol>
+      </div>
+
+      <p class="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-ivory/55">
+        The available contract address is <span class="text-gold">TBA</span> until the mint is published. Match it here before you sign. $TREMP is a meme, not a promise and not financial advice.
+      </p>
+
+      <div class="mt-8 flex justify-center">
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-b from-goldBright to-[#C4923A] px-8 py-3.5 font-display text-sm tracking-[0.22em] text-[#2A1608] shadow-[0_12px_40px_rgba(196,146,58,0.38)] transition hover:brightness-110">
+          BUY NOW <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="chart" class="mx-auto max-w-6xl px-5 py-16">
+      <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="font-display text-[11px] tracking-[0.42em] text-gold">04 · BIỂU ĐỒ</p>
+          <h2 class="mt-2 font-display text-4xl tracking-wide text-goldBright sm:text-5xl">The chart</h2>
+          <p class="mt-3 max-w-lg text-sm font-light leading-relaxed text-ivory/70">Dexscreener for the $TREMP pair. The frame below is the same board as the Chart button.</p>
+        </div>
+        <a href="https://dexscreener.com/sol/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 self-start rounded-full border border-sky/70 bg-sky/10 px-6 py-3 font-display text-xs tracking-[0.22em] text-sky transition hover:bg-sky/20">
+          CHART <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="panel relative overflow-hidden rounded-sm p-2 sm:p-3">
+        <span class="pointer-events-none absolute left-2 top-2 z-10 h-5 w-5 border-l-2 border-t-2 border-gold"></span>
+        <span class="pointer-events-none absolute right-2 top-2 z-10 h-5 w-5 border-r-2 border-t-2 border-gold"></span>
+        <span class="pointer-events-none absolute bottom-2 left-2 z-10 h-5 w-5 border-b-2 border-l-2 border-gold"></span>
+        <span class="pointer-events-none absolute bottom-2 right-2 z-10 h-5 w-5 border-b-2 border-r-2 border-gold"></span>
+        <iframe
+          title="Dexscreener chart for TREMP"
+          src="https://dexscreener.com/sol/TBA?embed=1&theme=dark&trades=0&info=0&chartTheme=dark&chartStyle=1&chartType=usd&interval=15"
+          class="h-[440px] w-full bg-black/40 md:h-[580px]"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-5 pb-24 pt-6">
+      <div class="panel relative overflow-hidden rounded-sm px-6 py-12 text-center sm:px-12">
+        <p class="font-display text-[11px] tracking-[0.42em] text-sky">THE PEDESTAL IS TAKEN</p>
+        <h2 class="mx-auto mt-3 max-w-2xl font-display text-4xl leading-tight text-goldBright sm:text-5xl">The Mall kept the statue.<br>The chain keeps the name.</h2>
+        <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-b from-goldBright to-[#C4923A] px-8 py-3.5 font-display text-sm tracking-[0.22em] text-[#2A1608] transition hover:brightness-110 sm:w-auto">BUY NOW <span aria-hidden="true">→</span></a>
+          <a href="https://dexscreener.com/sol/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-sky/70 px-8 py-3.5 font-display text-sm tracking-[0.22em] text-sky transition hover:bg-sky/15 sm:w-auto">CHART <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="mt-8 flex items-center justify-center gap-3">
+          <a href="https://t.me/Denald_Tremp" target="_blank" rel="noopener noreferrer" class="overflow-hidden rounded-full ring-1 ring-gold/40 transition hover:ring-sky" aria-label="Telegram">
+            <img src="tg.png" alt="" class="h-11 w-11 object-cover">
+          </a>
+          <a href="https://x.com/Denald_Tremp_x" target="_blank" rel="noopener noreferrer" class="overflow-hidden rounded-full bg-black ring-1 ring-gold/40 transition hover:ring-sky" aria-label="X">
+            <img src="x.png" alt="" class="h-11 w-11 object-cover">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-gold/25 bg-black/50">
+    <div class="mx-auto flex max-w-6xl flex-col items-center gap-5 px-5 py-10 text-center">
+      <a href="#top" class="flex items-center gap-3">
+        <img src="logo.png" alt="" class="h-10 w-10 rounded-full object-cover ring-2 ring-gold/80">
+        <span class="font-display tracking-[0.2em] text-goldBright">DENALD TREMP</span>
+      </a>
+      <p class="font-display text-xs tracking-[0.35em] text-sky">$TREMP · SOLANA</p>
+      <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[11px] uppercase tracking-[0.24em] text-ivory/60" aria-label="Footer">
+        <a href="#story" class="hover:text-gold">Story</a>
+        <a href="#how" class="hover:text-gold">How to Buy</a>
+        <a href="#chart" class="hover:text-gold">Chart</a>
+        <a href="https://t.me/Denald_Tremp" target="_blank" rel="noopener noreferrer" class="hover:text-gold">Telegram</a>
+        <a href="https://x.com/Denald_Tremp_x" target="_blank" rel="noopener noreferrer" class="hover:text-gold">X</a>
+      </nav>
+      <p class="max-w-lg text-xs leading-relaxed text-ivory/45">
+        Denald Tremp is a meme coin about a statue on the National Mall. Nothing here is financial advice. Confirm the contract address before you swap.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const copyButton = document.getElementById("copy-ca");
+    const copyLabel = document.getElementById("copy-label");
+    const copyStatus = document.getElementById("copy-status");
+
+    copyButton.addEventListener("click", async () => {
+      const ca = "TBA";
+      try {
+        await navigator.clipboard.writeText(ca);
+      } catch (error) {
+        const field = document.createElement("textarea");
+        field.value = ca;
+        document.body.appendChild(field);
+        field.select();
+        document.execCommand("copy");
+        field.remove();
+      }
+      copyLabel.textContent = "COPIED";
+      copyStatus.textContent = "Contract address copied";
+      window.setTimeout(() => {
+        copyLabel.textContent = "COPY";
+        copyStatus.textContent = "";
+      }, 1800);
+    });
+  </script>
+</body>
+</html>
